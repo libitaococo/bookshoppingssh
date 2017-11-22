@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping  >
+
+<!--   类和关系的映射文件 -->
+	<class name="bookShopping.model.Orderdata" table="bookshopping_orderdata" lazy="false">
+		<id name="odid" column="odid" >
+			<generator class="identity"/>
+		</id>
+		<property name="sum" column="sum" />
+		<property name="oid" column="oid" />
+		<!--  <many-to-one name="Order" class="bookShopping.model.Order" column="oid" not-null="true" >
+		</many-to-one>-->
+		  <many-to-one name="Pro" class="bookShopping.model.Pro" column="pid" not-null="true" >
+		</many-to-one> 
+	</class>
+
+
+</hibernate-mapping>

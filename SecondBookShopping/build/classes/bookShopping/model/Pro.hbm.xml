@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping  >
+
+<!--   类和关系的映射文件 -->
+	<class name="bookShopping.model.Pro" table="bookshopping_pro" lazy="false">
+		<id name="pid" column="pid" >
+			<generator class="identity"/>
+		</id>
+		<property name="pname" column="pname" length="20"/>
+		<property name="psn" column="psn" length="40"/>
+		<property name="pnum" column="pnum" length="20"/>
+		<property name="mprice" column="mprice"/>
+		<property name="vprice" column="vprice" />
+		<property name="pdesc" column="pdesc" />
+		<property name="pubtime" column="pubtime" type="date"/>
+		<property name="image" column="image"/>
+		
+		<many-to-one name="Cate" class="bookShopping.model.Cate" column="cid" not-null="true" >
+		</many-to-one>
+		
+		 <set name="comments">
+		<key column="pid"></key>
+		<one-to-many class="bookShopping.model.Comment"/>
+		</set>
+		
+	</class>
+
+
+</hibernate-mapping>

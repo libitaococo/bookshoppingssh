@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping  >
+
+<!--   类和关系的映射文件 -->
+	<class name="bookShopping.model.Order" table="bookshopping_order" lazy="false">
+		<id name="oid" column="oid" >
+			<!-- <generator class="identity"/> -->
+			<!-- <generator class="native"/> -->
+		</id>
+		<property name="oprice" column="oprice" />
+		<property name="onum" column="onum" />
+
+		<many-to-one name="User" class="bookShopping.model.User" column="uid" not-null="true" >
+		</many-to-one>
+		
+		<!--  <set name="order_datas" cascade="all">
+		<key column="odid"></key>
+		<one-to-many class="bookShopping.model.Order_data"/>
+		</set> -->
+			
+	</class>
+
+
+</hibernate-mapping>

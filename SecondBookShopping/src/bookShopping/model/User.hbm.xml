@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping  >
+
+<!--   类和关系的映射文件 -->
+	<class name="bookShopping.model.User" table="bookshopping_user" lazy="false">
+		<id name="uid" column="uid" >
+			<generator class="identity"/>
+		</id>
+		<property name="user" column="user" length="20"/>
+		<property name="password" column="password" length="20"/>
+		<property name="email" column="email" length="32"/>
+		<property name="name" column="name" length="20"/>
+		
+		<set name="carts">
+		<key column="uid"></key>
+		<one-to-many class="bookShopping.model.Cart"/>
+		</set>
+	</class>
+
+
+</hibernate-mapping>

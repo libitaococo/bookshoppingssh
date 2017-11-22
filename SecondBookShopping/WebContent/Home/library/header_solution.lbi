@@ -1,0 +1,56 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"><table width="770" border="0" cellpadding="0" cellspacing="0" class="pagetop">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0" class="pagetopLine">
+        <tr>
+          <td><img src="../graphics/space.gif" width="1" height="1"></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="pagetop">
+          <tr>
+            <td width="124">&nbsp;</td>
+            <td class="welcome">&nbsp;</td>
+            <td align="right" valign="top" class="help">张桐 已登录 | 个人信息维护 | 退出</td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="25" class="menuMain">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="menuMain1"><table height="16" border="0" cellpadding="0" cellspacing="0">
+                      <tr align="center">
+                        <td class="menuLinkbg"><a href="../html/home.htm" class="menuLink">首页</a></td>
+                        <td width="2"><img src="../graphics/menu_l.gif" width="2" height="23"></td>
+                        <td class="menuLinkbg"><a href="../html/pjrelease.htm" class="menuLink"> 物流需求发布 </a></td>
+                        <td width="2"><img src="../graphics/menu_l.gif" width="2" height="23"></td>
+                        <td class="menuLinkbgSel"><a href="../html/solution.htm" class="menuLinkSel">物流解决方案</a></td>
+                        <td width="2"><img src="../graphics/menu_l.gif" width="2" height="23"></td>
+                        <td class="menuLinkbg"><a href="../html/corp.htm" class="menuLink">物流企业园区</a></td>
+                        <td width="2"><img src="../graphics/menu_l.gif" width="2" height="23"></td>
+                        <td class="menuLinkbg"><a href="../html/forum.htm" class="menuLink">物流联盟论坛</a></td>
+                        <td width="2"><img src="../graphics/menu_l.gif" width="2" height="23"></td>
+                        <td class="menuLinkbg"><a href="../html/calculator.htm" class="menuLink">物流效率测算</a></td>
+                        <td width="2"><img src="../graphics/menu_l.gif" width="2" height="23"></td>
+                        <td class="menuLinkbg"><a href="../html/gps.htm" class="menuLink">GPS车辆跟踪</a></td>
+                        <td width="2"><img src="../graphics/menu_l.gif" width="2" height="23"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="../graphics/whole.jpg"></td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="3" background="../graphics/whole_line.gif"><img src="../graphics/space.gif" width="1" height="1"></td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>

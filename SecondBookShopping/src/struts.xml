@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.ui.theme" value="simple"></constant>
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+
+    <package name="book" extends="struts-default">
+      <action name="book_*" class="bookAction" method="{1}">
+        <result name="list">/bookList.jsp</result>
+       <result name="reload" type="redirect">book_list</result>
+      </action>
+    </package>
+    
+    <package name="admin" extends="struts-default">
+      <action name="admin_*" class="adminAction" method="{1}">
+        <result name="success">/Admin/home.jsp</result>
+        <result name="input" >/Admin/index.jsp</result>
+        <result name="list">/Admin/listAdmin.jsp</result>
+        <result name="error">/Admin/main.jsp</result>
+        <result name="reload" type="redirect">admin_listByPage.action?index=1</result>
+        <result name="edit">/Admin/editAdmin.jsp</result>
+      </action>
+    </package>
+    
+      <package name="user" extends="struts-default">
+      <action name="user_*" class="userAction" method="{1}">
+        <result name="success" type="redirect">index_list</result>
+        <result name="input" >/Home/login.jsp</result>
+        <result name="error1" >/Home/register.jsp</result>
+        <result name="error">/Admin/main.jsp</result>
+        <result name="list">/Admin/listUser.jsp</result>
+        <result name="reload" type="redirect">user_listByPage.action?index=1</result>
+        <result name="edit">/Admin/editUser.jsp</result>
+        <result name="listcart">${pageContext.request.contextPath}/Home/cart_list.jsp</result>
+      </action>
+    </package>
+    
+     <package name="cate" extends="struts-default">
+      <action name="cate_*" class="cateAction" method="{1}">
+        <result name="error">/Admin/main.jsp</result>
+        <result name="list">/Admin/listCate.jsp</result>
+        <result name="reload" type="redirect">cate_listByPage.action?index=1</result>
+        <result name="edit">/Admin/editCate.jsp</result>
+      </action>
+    </package>
+    
+    <package name="pro" extends="struts-default" >
+      <action name="pro_*" class="proAction" method="{1}">
+        <!-- 动态设置action的属性值 -->
+        <param name="savePath">/SecondBookShopping/uploadFiles/</param>
+        <result name="error">/Admin/main.jsp</result>
+        <result name="list">${pageContext.request.contextPath}/Admin/listPro.jsp</result>
+        <result name="reload" type="redirect">pro_listByPage.action?index=1</result>
+        <result name="edit">/Admin/editPro.jsp</result>
+        <result name="detail">/Admin/detailPro.jsp</result>
+        <result name="add">/Admin/addPro.jsp</result>
+        <result name="detailpro">${pageContext.request.contextPath}/Home/detailpro.jsp</result>
+      </action>
+    </package>
+    
+      <package name="index" extends="struts-default">
+      <action name="index_*" class="indexAction" method="{1}">
+        <result name="reload" type="redirect">pro_list</result>
+        <result name="index">/Home/index.jsp</result>
+      </action>
+    </package>
+    
+         <package name="comment" extends="struts-default">
+      <action name="comment_*" class="commentAction" method="{1}">
+        <result name="reload" type="redirect">pro_detailPro.action?pid=${pid}</result>
+        <result name="login" >${pageContext.request.contextPath}/Home/login.jsp</result>
+      </action>
+    </package>
+    
+     <package name="cart" extends="struts-default">
+      <action name="cart_*" class="cartAction" method="{1}">
+        <result name="reload" type="redirect">pro_detailPro.action?pid=${pid}</result>
+        <result name="login" >${pageContext.request.contextPath}/Home/login.jsp</result>
+       <result name="listcart">${pageContext.request.contextPath}/Home/cart_list.jsp</result>
+        <result name="reload1" type="redirect">cart_listcart.action?uid=${uid}</result>
+      </action>
+    </package>
+    
+    
+     <package name="order" extends="struts-default">
+      <action name="order_*" class="orderAction" method="{1}">
+        <result name="list" type="redirect">cart_listcart.action?uid=${uid}</result>
+        <result name="listorder" >${pageContext.request.contextPath}/Home/order_list.jsp</result>
+        <result name="login" >${pageContext.request.contextPath}/Home/login.jsp</result>
+        <result name="reload" type="redirect">order_list.action</result>
+         <result name="reload1" >${pageContext.request.contextPath}/Admin/listOrder.jsp</result>
+      </action>
+    </package>
+    
+     <package name="orderdata" extends="struts-default">
+      <action name="orderdata_*" class="orderdataAction" method="{1}">
+        <result name="listorder_data">${pageContext.request.contextPath}/Home/order_info.jsp</result>
+        <result name="reload" type="redirect">order_list.action</result>
+        <result name="list">${pageContext.request.contextPath}/Admin/detailOrder.jsp</result>
+      </action>
+    </package>
+    
+      
+</struts>

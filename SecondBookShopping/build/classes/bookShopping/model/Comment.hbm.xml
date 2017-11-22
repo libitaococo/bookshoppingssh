@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping  >
+
+<!--   类和关系的映射文件 -->
+	<class name="bookShopping.model.Comment" table="bookshopping_comment" lazy="false">
+		<id name="coid" column="coid" >
+			<generator class="identity"/>
+		</id>
+		<property name="score" column="score" />
+		<property name="content" column="content" />
+
+		<many-to-one name="User" class="bookShopping.model.User" column="uid" not-null="true" >
+		</many-to-one>
+		<many-to-one name="Pro" class="bookShopping.model.Pro" column="pid" not-null="true" >
+		</many-to-one> 
+	</class>
+
+
+</hibernate-mapping>
